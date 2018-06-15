@@ -9,21 +9,23 @@
 <!--<script src="assets/javascript/game.js"></script> -->
 </head>
 <body>
-Press New Game to Start
+<h1>President's Hangman</h1>
 <br>
-Letter Guessed: <span id="letterGuessed"></span><br>
+<div class="presstoStart"><h2>Press New Game to Start</h2></div>
+<br>
+<div class="stuff">Letter Guessed: <span id="letterGuessed"></span><br>
 Incorrect Letters: <span id="incorrect"></span><br>
 Wins: <span id="wins"></span><br>
 Loss: <span id="loss"> </span><br>
 Dash: <span id="placeholder"></span><br>
-Guesses Remaining: <span id= "guesses"></span><br>
+Guesses Remaining: <span id= "guesses"></span><br> </div>
 
 <span id= "placeholder"></span>
 <br>
-<button id = "newGame">
+<div class="buttondiv"><button id = "newGame">
 New Game
 </button>
-
+</div>
 <script type="text/javascript">
 //variables recieved through the array
 var $letterGuessed = document.getElementById("letterGuessed");
@@ -149,8 +151,9 @@ function checkLoss() {
 function checkWin() {
    
     console.log("Wins before are:" + wins);
-    if (chosenWord === placeholder.join(" ")) {
-        console.log ("THe placeholder is:" + $placeholder.textContent);
+    console.log ("THe placeholder is:" + placeholder.join(""));
+    if (chosenWord === placeholder.join("")) {
+       
         console.log("Wins during are:" + wins);
         wins ++;
         gameRunning = false;
